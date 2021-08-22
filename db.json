@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Aloe",
       "image": "./images/aloe.jpg",
-      "price": 15.99
+      "price": "FREE"
     },
     {
       "id": 2,
@@ -28,7 +28,7 @@
       "id": 5,
       "name": "Jade",
       "image": "./images/jade.jpg",
-      "price": 10.37
+      "price": "Not FREE"
     },
     {
       "id": 6,
@@ -41,6 +41,30 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "id": 8,
+      "name": "Newwww",
+      "image": "thingggg",
+      "price": "10000000"
+    },
+    {
+      "id": 9,
+      "name": "ANOTHER",
+      "image": "no",
+      "price": "02020202"
+    },
+    {
+      "id": 10,
+      "name": "NEEWWWw",
+      "image": "sndgdfg",
+      "price": "1010101"
+    },
+    {
+      "id": 11,
+      "name": "DIFFFFFERERER",
+      "image": "dfgfdf",
+      "price": "2222"
     }
   ]
 }

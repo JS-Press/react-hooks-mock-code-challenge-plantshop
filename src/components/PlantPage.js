@@ -4,7 +4,6 @@ import PlantList from "./PlantList";
 import Search from "./Search";
 
 function PlantPage({plants, setPlants, plantForm, setPlantForm}) {
-
   const [filterWord, setFilterWord] = useState('')
 
 function handleDelClick(plantId){
@@ -45,12 +44,23 @@ function handleDelClick(plantId){
     setPlants(newPlants)
      }
 
+  function updatePrice(price, id, plant){
+    const newPlantInfo = {'price' : price }
+    console.log('new P Info:',newPlantInfo)
+    fetch(`http://localhost:6001/plants/${plant.id}`, {
+      method : 'PATCH', 
+      headers: {
+      'Content-Type': 'application/json'},
+      body: JSON.stringify(newPlantInfo)
+    }).then(r => r.json()).then(data => console.log('completed! this:',data))
+  }
+
 
   return (
     <main>
       <NewPlantForm plantForm = {plantForm} handleSubmit = {handleSubmit} handleChange ={handleChange} handleDelClick = {handleDelClick}/>
       <Search  filterWord = {filterWord} setFilterWord = {setFilterWord} />
-      <PlantList filterWord = {filterWord} plants = {plants} setPlants = {setPlants} handleDelClick = {handleDelClick}/>
+      <PlantList updatePrice = {updatePrice} filterWord = {filterWord} plants = {plants} setPlants = {setPlants} handleDelClick = {handleDelClick}/>
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-function NewPlantForm({handleChange, plantForm, handleSubmit, handleDelClick }) {
+function NewPlantForm({handleChange, plantForm, handleSubmit}) {
 
   
   
