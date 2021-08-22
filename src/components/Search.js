@@ -10,12 +10,11 @@ function Search({ filterWord, setFilterWord }) {
       <input
         type="text"
         id="search"
-        value ={filterWord}
         placeholder="Type a name to search..."
         onChange={(e) => {
           setFilterWord(e.target.value)
-      
         }}
+        value ={filterWord}
       />
     </div>
   );

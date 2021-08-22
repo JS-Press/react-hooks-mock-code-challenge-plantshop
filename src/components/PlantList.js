@@ -1,9 +1,15 @@
 import React from "react";
 import PlantCard from "./PlantCard";
 
-function PlantList({plants, handleDelClick}) {
+function PlantList({plants, handleDelClick, setPlants, filterWord}) {
 
-const plantElements = plants ?  plants.map(plant => {
+let searchMatched = plants.filter( plant => plant.name.includes(filterWord) )
+
+// console.log('SM:',searchMatched)
+// console.log('FilterWord:',filterWord)
+// console.log('plants:',plants)
+
+const plantElements = searchMatched ?  searchMatched.map(plant => {
   return <PlantCard handleDelClick = {handleDelClick} key = {plant.id} plant = {plant}/> }) : null
 
   return (

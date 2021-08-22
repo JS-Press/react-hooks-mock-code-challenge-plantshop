@@ -45,13 +45,12 @@ function handleDelClick(plantId){
     setPlants(newPlants)
      }
 
-console.log(filterWord) 
 
   return (
     <main>
       <NewPlantForm plantForm = {plantForm} handleSubmit = {handleSubmit} handleChange ={handleChange} handleDelClick = {handleDelClick}/>
       <Search  filterWord = {filterWord} setFilterWord = {setFilterWord} />
-      <PlantList plants = {plants} handleDelClick = {handleDelClick}/>
+      <PlantList filterWord = {filterWord} plants = {plants} setPlants = {setPlants} handleDelClick = {handleDelClick}/>
     </main>
   );
 }
