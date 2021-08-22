@@ -5,6 +5,12 @@ import PlantPage from "./PlantPage";
 function App() {
 
 const [plants, setPlants] = useState('')
+const [plantForm, setPlantForm] = useState({
+  id: '',
+  name: '',
+  image: '',
+  price: ''
+})
 
 useEffect(() => {
   fetch('http://localhost:6001/plants')
@@ -18,7 +24,7 @@ useEffect(() => {
   return (
     <div className="app">
       <Header />
-      <PlantPage plants = {plants} setPlants = {setPlants}/>
+      <PlantPage plants = {plants} setPlants = {setPlants} plantForm={plantForm} setPlantForm = {setPlantForm}/>
     </div>
   );
 }
